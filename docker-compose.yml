@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  nginx:
+    build:
+      context: .
+    ports:
+      - "8083:80"
+    volumes:
+      - ./conf/testpay.kkb.kz.conf:/etc/nginx/nginx.conf
+      - ./validator.js:/etc/nginx/validator.js
